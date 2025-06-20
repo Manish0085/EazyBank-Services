@@ -60,8 +60,8 @@ public class CardServiceImpl implements ICardService {
 
     private Card createNewCard(String mobileNumber){
         Card card = new Card();
-        long cardId = 10_00_00_00_00 + new Random().nextInt(9_00_00_00_00);
-        card.setCardId(cardId);
+        long cardNumber = 10_00_00_00_00 + new Random().nextInt(9_00_00_00_00);
+        card.setCardNumber(Long.toString(cardNumber));
         card.setCardType(CardConstants.CREDIT_CARD);
         card.setMobileNumber(mobileNumber);
         card.setAmountUsed(0);

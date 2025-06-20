@@ -25,7 +25,7 @@ public class CardDto {
     private String mobileNumber;
 
     @NotEmpty(message = "Card Number should not be empty")
-    @Pattern(regexp = "^$|[0-9]{12}", message = "Card number is not valid")
+    @Pattern(regexp = "^$|[0-9]{10}", message = "Card number is not valid")
     @Schema(
             description = "12 digit Card number", example = "102345678901"
     )
@@ -46,7 +46,7 @@ public class CardDto {
     @Schema(
             description = "Total amount used against card", example = "1100"
     )
-    @Positive(message = "Total Amount used should be equal or greater then 0")
+    @PositiveOrZero(message = "Total Amount used should be equal or greater then 0")
     private int amountUsed;
 
     @Schema(

@@ -15,4 +15,6 @@ public interface AccountRepository extends JpaRepository<Accounts, Long> {
     @Transactional
     @Modifying
     void deleteByCustomerId(Long customerId);
+
+
 }
